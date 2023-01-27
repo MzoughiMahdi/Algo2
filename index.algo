@@ -1,0 +1,14 @@
+function sumOverlappingElements(set1, set2) {
+  let sum = 0;
+  for (const element of set1) {
+    if (set2.has(element)) {
+      sum += element;
+    }
+  }
+  return sum;
+}
+
+const set1 = new Set([12, 13, 6, 10]);
+const set2 = new Set([13, 10, 16, 15]);
+const overlappingSum = sumOverlappingElements(set1, set2);
+console.log(overlappingSum); // Outputs 46
